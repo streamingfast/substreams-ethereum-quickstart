@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package eth.basicexample.v1;
+
+message BasicExampleProtoData {
+  int32 version = 1;
+}

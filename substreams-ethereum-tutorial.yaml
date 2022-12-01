@@ -1,0 +1,26 @@
+specVersion: v0.1.0
+package:
+  name: 'substreams_ethereum_tutorial'
+  version: v0.1.0
+
+protobuf:
+  files:
+    - basicexample.proto
+  importPaths:
+    - ./proto
+
+imports:
+  eth: https://github.com/streamingfast/sf-ethereum/releases/download/v0.10.2/ethereum-v0.10.4.spkg
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: target/wasm32-unknown-unknown/release/substreams_ethereum_tutorial.wasm
+
+modules:
+  - name: eth_basic_mapper
+    kind: map
+    inputs:
+      - source: sf.ethereum.type.v2.Block
+    output:
+      type: proto:eth.basicexample.v1.BasicExampleProtoData
