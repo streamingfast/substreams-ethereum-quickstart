@@ -9,7 +9,7 @@ use substreams_ethereum::{pb as ethpb};
 fn map_basic_eth(block: ethpb::eth::v2::Block) -> Result<basicexample::BasicExampleProtoData, substreams::errors::Error> {
     // Extract data from the Ethereum Block and log to the console.
     // The data available in the Block directly represents the related protobuf.
-    // The full data model for a Ethereum Block is available at the following link.
+    // The full data model for an Ethereum Block is available at the following link.
     // https://github.com/streamingfast/firehose-ethereum/blob/develop/proto/sf/ethereum/type/v2/type.proto
     log::info!("block.ver: {:#?}", block.ver);
     log::info!("block.number: {:#?}", block.number);
