@@ -18,7 +18,7 @@ binaries:
     file: target/wasm32-unknown-unknown/release/substreams_ethereum_tutorial.wasm
 
 modules:
-  - name: eth_basic_mapper
+  - name: map_basic_eth
     kind: map
     inputs:
       - source: sf.ethereum.type.v2.Block

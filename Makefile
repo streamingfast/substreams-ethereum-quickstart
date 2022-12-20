@@ -4,7 +4,7 @@ build:
 
 .PHONY: stream
 stream: build
-	substreams run -e mainnet.eth.streamingfast.io:443 substreams-ethereum-tutorial.yaml sol_basic_mapper -s 12292922 -t +10
+	substreams run -e mainnet.eth.streamingfast.io:443 substreams-ethereum-tutorial.yaml map_basic_eth -s 12292922 -t +10
 
 .PHONY: codegen
 codegen:

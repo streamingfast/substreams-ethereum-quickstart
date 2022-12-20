@@ -6,7 +6,7 @@ use substreams::{log};
 use substreams_ethereum::{pb as ethpb};
 
 #[substreams::handlers::map]
-fn eth_basic_mapper(block: ethpb::eth::v2::Block) -> Result<basicexample::BasicExampleProtoData, substreams::errors::Error> {
+fn map_basic_eth(block: ethpb::eth::v2::Block) -> Result<basicexample::BasicExampleProtoData, substreams::errors::Error> {
     // Extract data from the Ethereum Block and log to the console.
     // The data available in the Block directly represents the related protobuf.
     // The full data model for a Ethereum Block is available at the following link.
