@@ -3,5 +3,8 @@ syntax = "proto3";
 package eth.basicexample.v1;
 
 message BasicExampleProtoData {
-  int32 version = 1;
+  string hash = 1;
+  uint64 number = 2;
+  string parent_hash = 3;
+  string timestamp = 4;
 }
