@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package eth.basicexample.v1;
+package sf.ethereum.block_meta.v1;
 
-message BasicExampleProtoData {
+message BlockMeta {
   string hash = 1;
   uint64 number = 2;
   string parent_hash = 3;

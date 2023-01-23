@@ -1,3 +1,3 @@
-#[path = "eth.basicexample.v1.rs"]
+#[path = "sf.ethereum.block_meta.v1.rs"]
 #[allow(dead_code)]
-pub mod basicexample;
+pub mod block_meta;
