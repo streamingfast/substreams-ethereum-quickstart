@@ -9,3 +9,7 @@ stream: build
 .PHONY: protogen
 protogen:
 	substreams protogen ./substreams.yaml --exclude-paths="sf/substreams,google"
+
+.PHONY: package
+package:
+	substreams pack ./substreams.yaml
