@@ -1,6 +1,6 @@
 mod pb;
 
-use pb::block_meta::BlockMeta;
+use pb::sf::ethereum::block_meta::v1::BlockMeta;
 
 use substreams::Hex;
 use substreams_ethereum::pb::eth;
