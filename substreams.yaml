@@ -20,4 +20,4 @@ modules:
     inputs:
       - source: sf.ethereum.type.v2.Block
     output:
-      type: proto:sf.ethereum.block_meta.v1.BlockMeta
+      type: proto:acme.block_meta.v1.BlockMeta
