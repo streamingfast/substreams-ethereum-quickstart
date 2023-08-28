@@ -1,16 +1,22 @@
 ENDPOINT ?= mainnet.eth.streamingfast.io:443
+START_BLOCK ?= 12292922
+STOP_BLOCK ?= +10
 
 .PHONY: build
 build:
 	cargo build --target wasm32-unknown-unknown --release
 
-.PHONY: stream
-stream: build
-	substreams run -e $(ENDPOINT) substreams.yaml map_block -s 12292922 -t +10
+.PHONY: run
+run: build
+	substreams run -e $(ENDPOINT) substreams.yaml map_block -s $(START_BLOCK) -t $(STOP_BLOCK)
+
+.PHONY: gui
+gui: build
+	substreams gui -e $(ENDPOINT) substreams.yaml map_block -s $(START_BLOCK) -t $(STOP_BLOCK)
 
 .PHONY: protogen
 protogen:
-	substreams protogen ./substreams.yaml --exclude-paths="sf/substreams,google"
+	substreams protogen ./substreams.yaml --exclude-paths="google,sf/substreams/rpc,sf/substreams/v1"
 
 .PHONY: package
 package:
